@@ -1,5 +1,5 @@
-import React from 'react';
-import { Header, QuizApp, Footer } from './components';
+import React from "react";
+import { Header, QuizApp, Footer } from "./components";
 const App = () => {
     return (
         <>

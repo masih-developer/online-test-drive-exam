@@ -1,40 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Question.css';
 
-const Quiz = () => {
+const Question = (props) => {
+
+    const [question, setQuestion] = useState({});
+
+    useEffect(() => {
+        setQuestion(props);
+    }, [])
+
     return (
         <>
             <div className='form-container'>
                 <div className='folan'>
-                    <h3 className='question-number'>سوال اول</h3>
+                    <h3 className='question-number'>سوال {question.id}</h3>
                     <img
-                        src='/assets/images/questions/q1.jpg'
+                        src={question.img}
                         className='question-img'
                         alt=''
                     />
-                    <p className='question-title'>جواب این سوال چیه</p>
+                    <p className='question-title'>{question.questionTitle}</p>
                 </div>
                 <form action=''>
-                    <div className='option-container'>
+                    {/* {question.questionOptions.map(item => {
+                        return <div className='option-container'>
+                            <input type='radio' name='question-1' id='option-1' />
+                            <label htmlFor='option-1'>{item.answer}</label>
+                        </div>
+                    })} */}
+                    {/* <div className='option-container'>
                         <input type='radio' name='question-1' id='option-1' />
-                        <label htmlFor='option-1'>گزینه اول</label>
+                        <label htmlFor='option-1'>{question.questionOptions[0].answer}</label>
                     </div>
                     <div className='option-container'>
                         <input type='radio' name='question-1' id='option-1' />
-                        <label htmlFor='option-1'>گزینه دوم</label>
+                        <label htmlFor='option-1'>{question.questionOptions[1].answer}</label>
                     </div>
                     <div className='option-container'>
                         <input type='radio' name='question-1' id='option-1' />
-                        <label htmlFor='option-1'>گزینه سوم</label>
+                        <label htmlFor='option-1'>{question.questionOptions[2].answer}</label>
                     </div>
                     <div className='option-container'>
                         <input type='radio' name='question-1' id='option-1' />
-                        <label htmlFor='option-1'>گزینه چهارم</label>
-                    </div>
+                        <label htmlFor='option-1'>{question.questionOptions[3].answer}</label>
+                    </div> */}
                 </form>
             </div>
         </>
     );
 };
 
-export default Quiz;
+export default Question;
