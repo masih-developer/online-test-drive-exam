@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background-color: crimson;
 }
 
 .header__logo {
@@ -26,9 +27,6 @@
 
 .header__title:hover {
     color: var(--yellow-color);
-}
-
-.nav {
 }
 
 .nav__list {
@@ -52,4 +50,26 @@
 
 .nav__link:hover {
     color: var(--yellow-color);
+}
+
+@media screen and (max-width: 629.98px) {
+    .nav {
+        display: none;
+
+    }
+
+    .header-wrapper {
+        justify-content: center;
+    }
+
+    .header__title {
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (max-width: 399.98px){
+    .header__title{
+        font-size: 1.75rem;
+    }
 }

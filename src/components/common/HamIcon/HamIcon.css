@@ -1,0 +1,11 @@
+.ham-icon {
+    display: none;
+    margin-left: auto;
+}
+
+
+@media screen and (max-width: 629.98px) {
+    .ham-icon {
+        display: block;
+    }
+}
