@@ -1,8 +1,13 @@
 import React from "react";
 import "./QuizApp.css";
+import Quiz from "./Quiz/Quiz";
 
 const QuizApp = () => {
-    return <div>QuizApp</div>;
+    return (
+        <>
+            <Quiz />
+        </>
+    );
 };
 
 export default QuizApp;
