@@ -1,0 +1,43 @@
+.form-container {
+    text-align: start;
+}
+
+.option-container {
+    background-color: #28bfc0;
+    max-width: 300px;
+    margin: 10px auto;
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.question-number {
+    max-width: 300px;
+    margin: 10px auto;
+    text-align: start;
+}
+
+.question-title {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+input[type="radio"] {
+    margin: 10px;
+}
+
+label {
+    color: white;
+    font-weight: 600;
+}
+
+.folan {
+    text-align: center;
+}
+
+.question-img {
+    max-width: 300px;
+    margin: 10px auto;
+}
