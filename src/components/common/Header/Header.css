@@ -1,0 +1,55 @@
+.header {
+    padding: 2rem 0;
+    background-color: var(--primary-color);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    color: var(--text-color);
+    margin-right: 2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    transition: 0.3s;
+}
+
+.header__title:hover {
+    color: var(--yellow-color);
+}
+
+.nav {
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item {
+    margin-left: 2rem;
+}
+
+.nav__item:last-child {
+    margin-left: 0;
+}
+
+.nav__link {
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--yellow-color);
+}
