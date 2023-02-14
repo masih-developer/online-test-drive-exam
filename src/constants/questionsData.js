@@ -1,7 +1,7 @@
 export const questions = [
     {
         id: 1,
-        img: "./assets/images/q1.jpg",
+        img: "./assets/images/questions/q1.jpg",
         questionTitle: "هنرجوی گرامی نام خطوط مشخص شده در تصویر بالا چیست؟",
         questionOptions: [
             { answer: "خطوط زیگزاگ", isCorrect: false },
@@ -12,7 +12,7 @@ export const questions = [
     },
     {
         id: 2,
-        img: "./assets/images/q2.jpg",
+        img: "./assets/images/questions/q2.jpg",
         questionTitle:
             "در بزرگراه اتومبیل شما دچار نقص فنی میشود برای هشدار به وسائط نقلیه دیگر تابلوی احتیاط را در چه فاصله ای از اتومبیل خود قرار می دهید؟ ",
         questionOptions: [
@@ -24,7 +24,7 @@ export const questions = [
     },
     {
         id: 3,
-        img: "./assets/images/q3.jpg",
+        img: "./assets/images/questions/q3.jpg",
         questionTitle: "در چند متر مانده به پیچ ها سبقت ممنوع است؟",
         questionOptions: [
             { answer: "100 متری", isCorrect: false },
@@ -35,7 +35,7 @@ export const questions = [
     },
     {
         id: 4,
-        img: "./assets/images/q4.jpg",
+        img: "./assets/images/questions/q4.jpg",
         questionTitle:
             "در تقاطع هم عرض اگر دو وسیله نقلیه ای که روبروی یکدیگر در حرکتند بخواهند وارد خیابان مجاور شوند حق تقدم با کدام است",
         questionOptions: [
@@ -50,7 +50,7 @@ export const questions = [
     },
     {
         id: 5,
-        img: "./assets/images/q5.jpg",
+        img: "./assets/images/questions/q5.jpg",
         questionTitle: "هنرجوی گرامی نوع پارک تصویر بالا را مشخص کنید",
         questionOptions: [
             { answer: "پارک عمودی", isCorrect: false },
@@ -61,7 +61,7 @@ export const questions = [
     },
     {
         id: 6,
-        img: "./assets/images/q6.jpg",
+        img: "./assets/images/questions/q6.jpg",
         questionTitle: "در میدان ها حق تقدم عبور با کدام وسیله است؟ ",
         questionOptions: [
             { answer: "وسیله ای اول وارد می شود.", isCorrect: false },
@@ -78,7 +78,7 @@ export const questions = [
     },
     {
         id: 7,
-        img: "./assets/images/q7.jpg",
+        img: "./assets/images/questions/q7.jpg",
         questionTitle: "با همان سرعت به راه خود ادامه می دهید.",
         questionOptions: [
             {
@@ -101,7 +101,7 @@ export const questions = [
     },
     {
         id: 8,
-        img: "./assets/images/q8.jpg",
+        img: "./assets/images/questions/q8.jpg",
         questionTitle:
             "وقتی در خط عبوری که حرکت می کنید اتومبیل ها توقف کرده باشند و راه مسدود شده باشد چه کار باید کرد؟",
         questionOptions: [
@@ -125,7 +125,7 @@ export const questions = [
     },
     {
         id: 9,
-        img: "./assets/images/q9.jpg",
+        img: "./assets/images/questions/q9.jpg",
         questionTitle:
             "چه موقع میتوانید به صورت دنده عقب از یک خیابان فرعی به خیابان اصلی وارد شوید؟",
         questionOptions: [
@@ -149,7 +149,7 @@ export const questions = [
     },
     {
         id: 10,
-        img: "./assets/images/q10.jpg",
+        img: "./assets/images/questions/q10.jpg",
         questionTitle: "در تقاطع بالا حق تقدم را مشخص کنید. ( آمبولانس در حال ماموریت است) ",
         questionOptions: [
             {
@@ -172,7 +172,7 @@ export const questions = [
     },
     {
         id: 11,
-        img: "./assets/images/q1.jpg",
+        img: "./assets/images/questions/q1.jpg",
         questionTitle: "نام نقاط قرمز رنگ مشخص شده در تصویر بالا چیست؟",
         questionOptions: [
             {
@@ -195,7 +195,7 @@ export const questions = [
     },
     {
         id: 12,
-        img: "./assets/images/q12.jpg",
+        img: "./assets/images/questions/q12.jpg",
         questionTitle: "در تقاطع بالا حق تقدم عبور را مشخص کنید.",
         questionOptions: [
             {
@@ -218,7 +218,7 @@ export const questions = [
     },
     {
         id: 13,
-        img: "./assets/images/q13.jpg",
+        img: "./assets/images/questions/q13.jpg",
         questionTitle: "در چند متری ورودی تونل ها سبقت گرفتن ممنوع است؟",
         questionOptions: [
             {
@@ -241,7 +241,7 @@ export const questions = [
     },
     {
         id: 14,
-        img: "./assets/images/q14.jpg",
+        img: "./assets/images/questions/q14.jpg",
         questionTitle: "حداکثر سرعت در جاده های اصلی برون شهری چند کیلومتر است؟",
         questionOptions: [
             {
@@ -264,7 +264,7 @@ export const questions = [
     },
     {
         id: 15,
-        img: "./assets/images/q15.jpg",
+        img: "./assets/images/questions/q15.jpg",
         questionTitle:
             "آیا رانندگان وسایل نقلیه امدادی در هنگام ماموریت مجاز به عبور از محل ممنوع می باشند؟",
         questionOptions: [
@@ -288,7 +288,7 @@ export const questions = [
     },
     {
         id: 16,
-        img: "./assets/images/q16.jpg",
+        img: "./assets/images/questions/q16.jpg",
         questionTitle: "در چه فاصله ای از اطراف چراغهای راهنمایی و رانندگی توقف ممنوع می باشد؟",
         questionOptions: [
             {
@@ -311,7 +311,7 @@ export const questions = [
     },
     {
         id: 17,
-        img: "./assets/images/q17.jpg",
+        img: "./assets/images/questions/q17.jpg",
         questionsTitle: "چرا شکسته و کثیف بودن شیشه های خودرو می تواند خطرناک باشد؟",
         questionOptions: [
             {
@@ -334,7 +334,7 @@ export const questions = [
     },
     {
         id: 18,
-        img: "./assets/images/q18.jpg",
+        img: "./assets/images/questions/q18.jpg",
         questionsTitle: "دور زدن از روی خط پر و یا یک خط ممتد …",
         questionOptions: [
             {
@@ -357,7 +357,7 @@ export const questions = [
     },
     {
         id: 19,
-        img: "./assets/images/q19.jpg",
+        img: "./assets/images/questions/q19.jpg",
         questionsTitle: "در هنگام ایمن کردن صحنه تصادف انجام کدامیک از موارد زیر صحیح نمی باشد؟",
         questionOptions: [
             {
@@ -380,7 +380,7 @@ export const questions = [
     },
     {
         id: 20,
-        img: "./assets/images/q20.jpg",
+        img: "./assets/images/questions/q20.jpg",
         questionsTitle: "کدامیک از موارد زیر در خصوص رانندگی در شب صحیح است؟",
         questionOptions: [
             {
