@@ -43,3 +43,49 @@ ul {
 a {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* responsive range */
+@media only screen and (max-width: 1400px) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 576px) {
+}
