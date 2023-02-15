@@ -9,3 +9,54 @@
         display: block;
     }
 }
+
+
+
+.ham {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+
+.ham span {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    transform: rotate(0);
+    transition: all 0.25s;
+}
+
+.dark .ham span {
+    background-color: #fff;
+}
+
+.ham span:nth-child(2) {
+    transform: translateY(7px);
+}
+
+.ham span:nth-child(3) {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+
+}
+
+.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header, QuizApp, Footer } from './components';
 import { mainContext } from './context';
+import React from "react";
 const App = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (

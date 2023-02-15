@@ -1,0 +1,11 @@
+.quiz-app {
+    margin-top: 10rem;
+}
+
+.quiz-app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
