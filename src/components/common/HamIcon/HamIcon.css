@@ -3,23 +3,14 @@
     margin-left: auto;
 }
 
-
-@media screen and (max-width: 629.98px) {
-    .ham-icon {
-        display: block;
-    }
-}
-
-
-
 .ham {
     cursor: pointer;
     width: 24px;
     height: 24px;
     transition: all 0.25s;
     position: relative;
+    display: none;
 }
-
 
 .ham span {
     position: absolute;
@@ -46,7 +37,6 @@
 
 .open {
     transform: rotate(90deg);
-
 }
 
 .open span:nth-child(1) {
@@ -59,4 +49,10 @@
 
 .open span:nth-child(3) {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+@media only screen and (max-width: 768px) {
+    .ham {
+        display: block;
+    }
 }
