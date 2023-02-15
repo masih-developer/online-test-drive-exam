@@ -1,43 +1,120 @@
 .form-container {
-    text-align: start;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5rem;
+    max-width: 100rem;
+    padding: 2rem;
 }
 
-.option-container {
-    background-color: #28bfc0;
-    max-width: 300px;
-    margin: 10px auto;
-    border-radius: 25px;
-    padding: 5px;
+.options-wrapper {
+    flex-basis: 50%;
+    width: 100%;
+}
+
+.question-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.option-item {
+    cursor: pointer;
+    background-color: #fff;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    border: 0.1rem solid var(--text-color);
+    gap: 0.5rem;
+}
+
+.option-item--active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.option-item--active,
+.option-item--active .option-item__bool {
+    border-color: #fff;
+}
+
+.option-item__bool {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0.2rem solid var(--text-color);
+}
+
+.option-item__answer {
+}
+
+.option-item:last-child {
+    margin-bottom: 0;
+}
+
+.question-title-wrapper {
+    margin-bottom: 3rem;
 }
 
 .question-number {
-    max-width: 300px;
-    margin: 10px auto;
-    text-align: start;
+    font-size: 3rem;
 }
 
 .question-title {
-    max-width: 300px;
-    margin: 0 auto;
-    text-align: start;
-}
-
-input[type="radio"] {
-    margin: 10px;
-}
-
-label {
-    color: white;
+    max-width: 100%;
+    text-indent: 0.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
-.folan {
+.form-container__img-wrapper {
     text-align: center;
+    flex-basis: 50%;
 }
 
 .question-img {
-    max-width: 300px;
-    margin: 10px auto;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container__img-wrapper,
+    .options-wrapper {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .form-container {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .question-number {
+        font-size: 2.5rem;
+    }
+
+    .question-title {
+        font-size: 1.6rem;
+    }
+
+    .option-item__answer {
+        font-size: 1.5rem;
+    }
 }
