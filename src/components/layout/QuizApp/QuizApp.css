@@ -2,14 +2,21 @@
     margin: 10rem 0;
 }
 
-.quiz-app-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5rem;
-}
-
 .score {
     text-align: center;
+}
+
+.slick-next:before {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-next {
+    background-color: var(--primary-color);
+}
+
+.slick-prev:before {
+    display: none;
 }

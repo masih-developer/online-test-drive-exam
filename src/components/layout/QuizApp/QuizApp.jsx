@@ -4,12 +4,19 @@ import { Question } from '../../index';
 import { questions as questionList } from '../../../constants/questionsData';
 import { useContext } from 'react';
 import { mainContext } from '../../../context';
+import Slider from 'react-slick';
+
 const QuizApp = () => {
     const [questions, setQuestions] = useState([]);
     const { score } = useContext(mainContext);
     useEffect(() => {
         setQuestions(questionList);
     }, []);
+    const options = {
+        slidesToShow: 1,
+        arrows: true,
+        swipe: false,
+    };
 
     return (
         <>
@@ -17,9 +24,11 @@ const QuizApp = () => {
                 <p className='score'>امتیاز شما : {score}</p>
                 <div className='container'>
                     <div className='quiz-app-wrapper'>
-                        {questions.map((question) => (
-                            <Question key={question.id} {...question} />
-                        ))}
+                        <Slider {...options}>
+                            {questions.map((question) => (
+                                <Question key={question.id} {...question} />
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>
