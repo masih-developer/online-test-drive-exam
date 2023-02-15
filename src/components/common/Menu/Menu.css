@@ -3,7 +3,10 @@
     height: 100vh;
     position:absolute;
     top: 0;
-    left: -100%;
+    /* left: -100%; */
+    /* ! comment upcomming 2 lines and uncomment previous one :)) */
+    left: 0;
+    display: none;
     width: 40%;
     min-width: 300px;
     transition: all 0.5s ease;
