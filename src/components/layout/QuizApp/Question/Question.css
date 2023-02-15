@@ -4,11 +4,12 @@
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     gap: 5rem;
     max-width: 100rem;
     padding: 2rem;
+    margin: 0 auto;
 }
 
 .options-wrapper {
@@ -32,6 +33,7 @@
     border-radius: 5rem;
     border: 0.1rem solid var(--text-color);
     overflow: hidden;
+    direction: rtl;
 }
 
 .option-item:last-child {
@@ -54,9 +56,6 @@
     color: #f44336;
     background-color: #ffebee;
     border: 0.2rem dashed #f44336;
-}
-
-.option-item--false {
 }
 
 .option-item__bool {
@@ -122,6 +121,7 @@
 
 .question-number {
     font-size: 3rem;
+    text-align: end;
 }
 
 .question-title {
@@ -129,6 +129,7 @@
     text-indent: 0.5rem;
     font-size: 1.8rem;
     font-weight: 600;
+    text-align: right;
 }
 
 .form-container__img-wrapper {
