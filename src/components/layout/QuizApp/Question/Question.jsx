@@ -7,30 +7,34 @@ const Question = (props) => {
     useEffect(() => {
         setQuestion(props);
     }, [props]);
+
+    const changer = (e) => {
+        console.log(e.target.parentElement);
+    };
+
     return (
         <>
             <div className="form-container">
-                <div className="folan">
-                    <h3 className="question-number">سوال {question.id}</h3>
+                <div className="form-container__img-wrapper">
                     <img src={question.img} className="question-img" alt="" />
-                    <p className="question-title">{question.questionTitle}</p>
                 </div>
-                <form action="">
-                    {Object.keys(question).length > 0
-                        ? question.questionOptions.map((item, index) => {
-                              return (
-                                  <div className="option-container" key={index}>
-                                      <input
-                                          type="radio"
-                                          name="question-1"
-                                          id={`option-${index + 1}`}
-                                      />
-                                      <label htmlFor={`option-${index + 1}`}>{item.answer}</label>
-                                  </div>
-                              );
-                          })
-                        : null}
-                </form>
+                <div className="options-wrapper" onChange={(e) => changer(e)}>
+                    <div className="question-title-wrapper">
+                        {" "}
+                        <h3 className="question-number">{question.id}#</h3>
+                        <p className="question-title">{question.questionTitle}</p>
+                    </div>
+                    <ul className="question-list">
+                        {Object.keys(question).length > 0
+                            ? question.questionOptions.map((item, index) => (
+                                  <li className="option-item" key={index}>
+                                      <span className="option-item__bool"></span>
+                                      <p className="option-item__answer">{item.answer}</p>
+                                  </li>
+                              ))
+                            : null}
+                    </ul>
+                </div>
             </div>
         </>
     );
