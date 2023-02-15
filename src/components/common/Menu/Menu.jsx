@@ -11,7 +11,7 @@ function Menu() {
             } else {
                 menu.current.classList.remove('show')
             }
-            console.log(menu.current);
+            // console.log(menu.current);
         };
         menuHandler();
     }, [menuOpen]);
