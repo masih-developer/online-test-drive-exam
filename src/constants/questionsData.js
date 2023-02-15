@@ -312,7 +312,7 @@ export const questions = [
     {
         id: 17,
         img: "./assets/images/questions/q17.jpg",
-        questionsTitle: "چرا شکسته و کثیف بودن شیشه های خودرو می تواند خطرناک باشد؟",
+        questionTitle: "چرا شکسته و کثیف بودن شیشه های خودرو می تواند خطرناک باشد؟",
         questionOptions: [
             {
                 answer: "چون باعث کاهش انعکاس نور می شود.",
@@ -335,7 +335,7 @@ export const questions = [
     {
         id: 18,
         img: "./assets/images/questions/q18.jpg",
-        questionsTitle: "دور زدن از روی خط پر و یا یک خط ممتد …",
+        questionTitle: "دور زدن از روی خط پر و یا یک خط ممتد …",
         questionOptions: [
             {
                 answer: "ممنوع است",
@@ -358,7 +358,7 @@ export const questions = [
     {
         id: 19,
         img: "./assets/images/questions/q19.jpg",
-        questionsTitle: "در هنگام ایمن کردن صحنه تصادف انجام کدامیک از موارد زیر صحیح نمی باشد؟",
+        questionTitle: "در هنگام ایمن کردن صحنه تصادف انجام کدامیک از موارد زیر صحیح نمی باشد؟",
         questionOptions: [
             {
                 answer: "استفاده از تابلو اعلان خطر در فاصله مناسب از تصادف",
@@ -381,7 +381,7 @@ export const questions = [
     {
         id: 20,
         img: "./assets/images/questions/q20.jpg",
-        questionsTitle: "کدامیک از موارد زیر در خصوص رانندگی در شب صحیح است؟",
+        questionTitle: "کدامیک از موارد زیر در خصوص رانندگی در شب صحیح است؟",
         questionOptions: [
             {
                 answer: "با افزایش سرعت در شبها می توان کاهش دید را جبران کرد.",
