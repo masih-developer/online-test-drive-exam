@@ -9,3 +9,7 @@
     flex-direction: column;
     gap: 5rem;
 }
+
+.score {
+    text-align: center;
+}
