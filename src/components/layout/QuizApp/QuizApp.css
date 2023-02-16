@@ -4,19 +4,28 @@
 
 .score {
     text-align: center;
-}
-
-.slick-next:before {
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 5rem;
 }
 
 .slick-next {
-    background-color: var(--primary-color);
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: 50%;
+    bottom: 50%;
+    right: 0;
+}
+
+.slick-next:hover {
+}
+
+.slick-next:before {
+    opacity: 1;
+    color: var(--primary-color) !important;
+    font-size: 3.5rem;
 }
 
 .slick-prev:before {
-    display: none;
+    display: none !important;
 }

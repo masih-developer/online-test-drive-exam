@@ -70,6 +70,7 @@
     appearance: none;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .option-item__bool:after {
@@ -114,6 +115,7 @@
     justify-content: flex-start;
     gap: 0.5rem;
     background-color: none;
+    cursor: pointer;
 }
 
 .question-title-wrapper {
@@ -123,6 +125,7 @@
 .question-number {
     font-size: 3rem;
     text-align: end;
+    color: var(--primary-color);
 }
 
 .question-title {
