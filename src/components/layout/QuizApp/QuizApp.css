@@ -17,9 +17,6 @@
     right: 0;
 }
 
-.slick-next:hover {
-}
-
 .slick-next:before {
     opacity: 1;
     color: var(--primary-color) !important;
