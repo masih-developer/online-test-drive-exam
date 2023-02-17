@@ -7,8 +7,14 @@ import { mainContext } from '../../../context';
 
 const QuizApp = () => {
     const [questions, setQuestions] = useState([]);
-    const { wrongAnswer, correctAnswer, endTime, setEndTime } =
-        useContext(mainContext);
+    const {
+        wrongAnswer,
+        correctAnswer,
+        endTime,
+        setEndTime,
+        showExam,
+        startExam,
+    } = useContext(mainContext);
     const [isFinishExam, setIsFinishExam] = useState(false);
 
     useEffect(() => {
@@ -25,30 +31,40 @@ const QuizApp = () => {
             <div className='quiz-app'>
                 <div className='container'>
                     <div className='quiz-app-wrapper'>
-                        {!isFinishExam ? (
-                            <>
-                                {questions.length > 0 &&
-                                    questions.map((question) => (
-                                        <Question
-                                            key={question.id}
-                                            {...question}
-                                        />
-                                    ))}
-
-                                <button
-                                    className='finish-quiz-btn'
-                                    onClick={endExam}
-                                >
-                                    پایان آزمون
-                                </button>
-                            </>
-                        ) : (
-                            <Resualt
-                                endTime={endTime}
-                                correctAnswer={correctAnswer}
-                                wrongAnswer={wrongAnswer}
-                            />
+                        {!showExam && (
+                            <button
+                                className='start-quiz-btn'
+                                onClick={startExam}
+                            >
+                                شروع آزمون
+                            </button>
                         )}
+
+                        {showExam &&
+                            (isFinishExam ? (
+                                <Resualt
+                                    endTime={endTime}
+                                    correctAnswer={correctAnswer}
+                                    wrongAnswer={wrongAnswer}
+                                />
+                            ) : (
+                                <>
+                                    {questions.length > 0 &&
+                                        questions.map((question) => (
+                                            <Question
+                                                key={question.id}
+                                                {...question}
+                                            />
+                                        ))}
+
+                                    <button
+                                        className='finish-quiz-btn'
+                                        onClick={endExam}
+                                    >
+                                        پایان آزمون
+                                    </button>
+                                </>
+                            ))}
                     </div>
                 </div>
             </div>

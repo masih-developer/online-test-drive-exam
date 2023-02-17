@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import './Resualt.css';
+import { questions } from '../../../constants/questionsData';
 import { mainContext } from '../../../context';
 function Resualt() {
     const { correctAnswer, wrongAnswer, endTime, startTime } =
@@ -26,19 +27,18 @@ function Resualt() {
 
                 <div className='answers-count-box'>
                     <p className='answers-count'>
-                        {20 - (correctAnswer + wrongAnswer)}
+                        {questions.length - (correctAnswer + wrongAnswer)}
                     </p>
                     <p className='answers-desc'>تعداد نزده</p>
                 </div>
 
                 <div dir='rtl' className='time-box'>
                     <p className='time-desc'>مدت زمان آزمون</p>
-                    <p className='time-value' >
+                    <p className='time-value'>
                         {minutesBetweenTwoDate} دقیقه و {secondBetweenTwoDate}{' '}
                         ثانیه
                     </p>
                 </div>
-                
             </div>
         </>
     );

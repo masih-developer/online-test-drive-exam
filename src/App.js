@@ -31,11 +31,12 @@ const App = () => {
                     startTime,
                     endTime,
                     setEndTime,
+                    showExam,
+                    startExam,
                 }}
             >
                 <Header />
-                {!showExam && <button onClick={startExam} className='start-quiz-btn' >شروع آزمون</button>}
-                {showExam && <QuizApp />}
+                <QuizApp />
                 <Footer />
             </mainContext.Provider>
         </>

@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="footer-copy-right">
                 <p className="footer-author">
                     ساخته شده توسط <a href="https://github.com/masih-developer">masih-developer</a>{" "}
-                    و <a href="https://github.com/dosepehr">do-sepehr</a>
+                    و <a href="https://github.com/dosepehr">dosepehr</a>
                 </p>
                 <p className="footer-copy-right__text">
                     تمامی حقوق برای این وب اپلیکیشن محفوظ می باشد.

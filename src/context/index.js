@@ -13,4 +13,6 @@ export const mainContext = createContext({
     endTime: 0,
     setEndTime: () => {},
     nowDate: 0,
+    showExam: false,
+    startExam: () => {},
 });
