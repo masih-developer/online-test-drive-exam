@@ -10,14 +10,3 @@
 .quiz-app-wrapper {
     direction: ltr;
 }
-
-
-
-.finish-quiz-btn {
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: var(--primary-color);
-    border: none;
-}

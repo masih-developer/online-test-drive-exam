@@ -7,12 +7,18 @@ import { mainContext } from '../../../context';
 
 const QuizApp = () => {
     const [questions, setQuestions] = useState([]);
-    const { wrongAnswer, correctAnswer } = useContext(mainContext);
+    const { wrongAnswer, correctAnswer, endTime, setEndTime } =
+        useContext(mainContext);
     const [isFinishExam, setIsFinishExam] = useState(false);
 
     useEffect(() => {
         setQuestions(questionList);
     }, []);
+
+    const endExam = () => {
+        setIsFinishExam(true);
+        setEndTime(new Date().getTime());
+    };
 
     return (
         <>
@@ -28,17 +34,17 @@ const QuizApp = () => {
                                             {...question}
                                         />
                                     ))}
-                                {wrongAnswer + correctAnswer === 20 && (
-                                    <button
-                                        className='finish-quiz-btn'
-                                        onClick={() => setIsFinishExam(true)}
-                                    >
-                                        پایان آزمون
-                                    </button>
-                                )}
+
+                                <button
+                                    className='finish-quiz-btn'
+                                    onClick={endExam}
+                                >
+                                    پایان آزمون
+                                </button>
                             </>
                         ) : (
                             <Resualt
+                                endTime={endTime}
                                 correctAnswer={correctAnswer}
                                 wrongAnswer={wrongAnswer}
                             />

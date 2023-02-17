@@ -7,6 +7,15 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [correctAnswer, setCorrectAnswer] = useState(0);
     const [wrongAnswer, setWrongAnswer] = useState(0);
+    const [showExam, setShowExam] = useState(false);
+    const [startTime, setStartTime] = useState(0);
+    const [endTime, setEndTime] = useState(0);
+
+    const startExam = () => {
+        setShowExam(true);
+        setStartTime(new Date().getTime());
+    };
+
     return (
         <>
             <mainContext.Provider
@@ -19,10 +28,14 @@ const App = () => {
                     setCorrectAnswer,
                     wrongAnswer,
                     setWrongAnswer,
+                    startTime,
+                    endTime,
+                    setEndTime,
                 }}
             >
                 <Header />
-                <QuizApp />
+                {!showExam && <button onClick={startExam} className='start-quiz-btn' >شروع آزمون</button>}
+                {showExam && <QuizApp />}
                 <Footer />
             </mainContext.Provider>
         </>

@@ -9,4 +9,8 @@ export const mainContext = createContext({
     wrongAnswer: 0,
     setWrongAnswer: () => {},
     setCorrectAnswer: () => {},
+    startTime: 0,
+    endTime: 0,
+    setEndTime: () => {},
+    nowDate: 0,
 });

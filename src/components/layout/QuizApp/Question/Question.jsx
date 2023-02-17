@@ -6,7 +6,6 @@ const Question = (props) => {
         useContext(mainContext);
     const [question, setQuestion] = useState({});
     const [showAnsQues, setShowAnsQues] = useState(false);
-    // const [isAnswered, setIsAnswered] = useState(false);
 
     useEffect(() => {
         setQuestion(props);
