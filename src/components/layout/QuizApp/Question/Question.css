@@ -9,7 +9,11 @@
     gap: 5rem;
     max-width: 100rem;
     padding: 2rem;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
+}
+
+.form-container:last-child {
+    margin-bottom: 0;
 }
 
 .options-wrapper {
@@ -33,7 +37,6 @@
     border-radius: 5rem;
     border: 0.1rem solid var(--text-color);
     overflow: hidden;
-    direction: rtl;
 }
 
 .option-item:last-child {
@@ -123,8 +126,8 @@
 }
 
 .question-number {
+    text-align: right;
     font-size: 3rem;
-    text-align: end;
     color: var(--primary-color);
 }
 
@@ -149,7 +152,7 @@
 
 @media only screen and (max-width: 768px) {
     .form-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .form-container__img-wrapper,
