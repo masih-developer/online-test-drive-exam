@@ -5,6 +5,8 @@ import React from 'react';
 const App = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [score, setScore] = useState(0);
+    const [correctAnswer, setCorrectAnswer] = useState(0);
+    const [wrongAnswer, setWrongAnswer] = useState(0);
     return (
         <>
             <mainContext.Provider
@@ -13,6 +15,10 @@ const App = () => {
                     setMenuOpen,
                     score,
                     setScore,
+                    correctAnswer,
+                    setCorrectAnswer,
+                    wrongAnswer,
+                    setWrongAnswer,
                 }}
             >
                 <Header />

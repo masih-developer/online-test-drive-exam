@@ -37,6 +37,7 @@
     border-radius: 5rem;
     border: 0.1rem solid var(--text-color);
     overflow: hidden;
+    direction: rtl;
 }
 
 .option-item:last-child {

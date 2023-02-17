@@ -1,56 +1,36 @@
-import React, { useState, useEffect } from "react";
-import "./QuizApp.css";
-import { Question } from "../../index";
-import { questions as questionList } from "../../../constants/questionsData";
-import { useContext } from "react";
-import { mainContext } from "../../../context";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState, useEffect } from 'react';
+import './QuizApp.css';
+import { Question, Resualt } from '../../index';
+import { questions as questionList } from '../../../constants/questionsData';
+import { useContext } from 'react';
+import { mainContext } from '../../../context';
 
 const QuizApp = () => {
     const [questions, setQuestions] = useState([]);
-    const { score } = useContext(mainContext);
-    const [nextSlide, setNextSlide] = useState(false);
-    const [isShowFinishBtn, setIsShowFinishBtn] = useState(false);
+    const { wrongAnswer, correctAnswer } = useContext(mainContext);
     const [isFinishExam, setIsFinishExam] = useState(false);
 
     useEffect(() => {
         setQuestions(questionList);
     }, []);
 
-    const accesssForNextSlide = (access) => {
-        setNextSlide(access);
-    };
-
     return (
         <>
-            <div className="quiz-app">
-                <div className="container">
-                    <div className="quiz-app-wrapper">
+            <div className='quiz-app'>
+                <div className='container'>
+                    <div className='quiz-app-wrapper'>
                         {!isFinishExam ? (
                             <>
-                                <Swiper
-                                    allowSlidePrev={false}
-                                    allowSlideNext={nextSlide}
-                                    slidesPerView={1}
-                                    onSlideChange={(e) => {
-                                        setNextSlide(false);
-                                        e.isEnd && setIsShowFinishBtn(true);
-                                    }}
-                                >
-                                    {questions.length > 0 &&
-                                        questions.map((question) => (
-                                            <SwiperSlide key={question.id}>
-                                                <Question
-                                                    key={question.id}
-                                                    {...question}
-                                                    toAllowNext={accesssForNextSlide}
-                                                />
-                                            </SwiperSlide>
-                                        ))}
-                                </Swiper>
-                                {isShowFinishBtn && (
+                                {questions.length > 0 &&
+                                    questions.map((question) => (
+                                        <Question
+                                            key={question.id}
+                                            {...question}
+                                        />
+                                    ))}
+                                {wrongAnswer + correctAnswer === 20 && (
                                     <button
-                                        className="finish-quiz-btn"
+                                        className='finish-quiz-btn'
                                         onClick={() => setIsFinishExam(true)}
                                     >
                                         پایان آزمون
@@ -58,7 +38,10 @@ const QuizApp = () => {
                                 )}
                             </>
                         ) : (
-                            "hello"
+                            <Resualt
+                                correctAnswer={correctAnswer}
+                                wrongAnswer={wrongAnswer}
+                            />
                         )}
                     </div>
                 </div>

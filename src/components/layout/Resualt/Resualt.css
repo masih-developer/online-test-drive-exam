@@ -1,0 +1,36 @@
+.resualt-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.resualt-title {
+    font-size: 4rem;
+    color: var(--yellow-color);
+    margin-bottom: 20px;
+}
+
+.answers-count-box {
+    display: flex;
+    align-items: center;
+}
+
+
+.answers-count {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.answers-desc{
+    font-size: 2rem;
+    color: var(--text-color);
+}

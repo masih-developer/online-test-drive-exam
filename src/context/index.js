@@ -5,4 +5,8 @@ export const mainContext = createContext({
     setMenuOpen: () => {},
     score: 0,
     setScore: () => {},
+    correctAnswer: 0,
+    wrongAnswer: 0,
+    setWrongAnswer: () => {},
+    setCorrectAnswer: () => {},
 });

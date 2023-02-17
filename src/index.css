@@ -18,10 +18,10 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-family: "Vazirmatn", sans-serif;
 }
 
 body {
-    font-family: "Vazirmatn", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     color: var(--text-color);
