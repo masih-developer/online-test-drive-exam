@@ -6,12 +6,15 @@ const Question = (props) => {
         useContext(mainContext);
     const [question, setQuestion] = useState({});
     const [showAnsQues, setShowAnsQues] = useState(false);
+    const [showDesc, setShowDesc] = useState(false);
 
     useEffect(() => {
         setQuestion(props);
     }, [props]);
 
-    const answeredHandler = (e, isCrr) => {
+    const answeredHandler = (e, isCrr, id) => {
+        console.log(id);
+        setShowDesc(true);
         if (isCrr) {
             setCorrectAnswer((prev) => prev + 1);
             setScore((score) => score + 1);
@@ -70,7 +73,8 @@ const Question = (props) => {
                                                   onClick={(e) => {
                                                       answeredHandler(
                                                           e,
-                                                          item.isCorrect
+                                                          item.isCorrect,
+                                                          question.id
                                                       );
                                                   }}
                                                   type='radio'
@@ -85,6 +89,16 @@ const Question = (props) => {
                               })
                             : null}
                     </ul>
+                    {showDesc && (
+                        <div>
+                            <p className='question-description'>
+                                {question.questionDesc}
+                            </p>
+                            <p className='question-source'>
+                                {question.questionSource}
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

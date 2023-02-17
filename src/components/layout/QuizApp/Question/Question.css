@@ -180,3 +180,21 @@
         font-size: 1.5rem;
     }
 }
+
+
+
+.question-description {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 2rem 0;
+}
+
+.question-source {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--yellow-color);
+    margin-bottom: 1rem;
+}

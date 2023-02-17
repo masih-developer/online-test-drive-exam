@@ -15,4 +15,6 @@ export const mainContext = createContext({
     nowDate: 0,
     showExam: false,
     startExam: () => {},
+    showDesc: false,
+    setShowDesc: () => {},
 });

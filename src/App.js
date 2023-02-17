@@ -10,6 +10,7 @@ const App = () => {
     const [showExam, setShowExam] = useState(false);
     const [startTime, setStartTime] = useState(0);
     const [endTime, setEndTime] = useState(0);
+    const [showDesc, setShowDesc] = useState(false);
 
     const startExam = () => {
         setShowExam(true);
@@ -33,6 +34,8 @@ const App = () => {
                     setEndTime,
                     showExam,
                     startExam,
+                    showDesc,
+                    setShowDesc,
                 }}
             >
                 <Header />
