@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import "./HamIcon.css";
+import { useEffect, useContext } from 'react';
+import { mainContext } from '../../../context';
+import './HamIcon.css';
 
 function HamIcon(props) {
-    const [hamIconIsShow, setHamIconIsShow] = useState(false);
+    const { hamIconIsShow, setHamIconIsShow } = useContext(mainContext);
 
     const openHamIconHandler = () => {
         setHamIconIsShow(!hamIconIsShow);
@@ -14,10 +15,13 @@ function HamIcon(props) {
 
     return (
         <>
-            <div className={`ham${hamIconIsShow ? " open" : ""}`} onClick={openHamIconHandler}>
-                <span className="ham-top "></span>
-                <span className="ham-middle "></span>
-                <span className="ham-bottom "></span>
+            <div
+                className={`ham${hamIconIsShow ? ' open' : ''}`}
+                onClick={openHamIconHandler}
+            >
+                <span className='ham-top '></span>
+                <span className='ham-middle '></span>
+                <span className='ham-bottom '></span>
             </div>
         </>
     );

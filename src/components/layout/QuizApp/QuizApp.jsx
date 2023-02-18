@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import './QuizApp.css';
+import { useEffect, useContext } from 'react';
 import { Question, Resualt } from '../../index';
 import { questions as questionList } from '../../../constants/questionsData';
-import { useContext } from 'react';
 import { mainContext } from '../../../context';
+import './QuizApp.css';
 
 const QuizApp = () => {
-    const [questions, setQuestions] = useState([]);
     const {
         wrongAnswer,
         correctAnswer,
@@ -14,8 +12,11 @@ const QuizApp = () => {
         setEndTime,
         showExam,
         startExam,
+        questions,
+        setQuestions,
+        isFinishExam,
+        setIsFinishExam,
     } = useContext(mainContext);
-    const [isFinishExam, setIsFinishExam] = useState(false);
 
     useEffect(() => {
         setQuestions(questionList);

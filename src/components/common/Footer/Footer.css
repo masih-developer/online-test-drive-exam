@@ -1,6 +1,6 @@
 .footer {
     color: #fff;
-    background-color: #212121;
+    background-color: var(--black-color);
     text-align: center;
 }
 
@@ -34,7 +34,7 @@
 
 .footer__link svg {
     width: 2.5rem;
-    fill: #212121;
+    fill: var(--black-color);
 }
 
 .footer-copy-right {

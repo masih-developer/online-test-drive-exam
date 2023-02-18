@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
-import './Question.css';
 import { mainContext } from '../../../../context';
+import './Question.css';
 const Question = (props) => {
     const { setScore, setCorrectAnswer, setWrongAnswer } =
         useContext(mainContext);
@@ -12,8 +12,7 @@ const Question = (props) => {
         setQuestion(props);
     }, [props]);
 
-    const answeredHandler = (e, isCrr, id) => {
-        console.log(id);
+    const answeredHandler = (e, isCrr) => {
         setShowDesc(true);
         if (isCrr) {
             setCorrectAnswer((prev) => prev + 1);
@@ -73,8 +72,7 @@ const Question = (props) => {
                                                   onClick={(e) => {
                                                       answeredHandler(
                                                           e,
-                                                          item.isCorrect,
-                                                          question.id
+                                                          item.isCorrect
                                                       );
                                                   }}
                                                   type='radio'
@@ -89,17 +87,19 @@ const Question = (props) => {
                               })
                             : null}
                     </ul>
-                    {showDesc && (
-                        <div>
-                            <p className='question-description'>
-                                {question.questionDesc}
-                            </p>
-                            <p className='question-source'>
-                                {question.questionSource}
-                            </p>
-                        </div>
-                    )}
                 </div>
+            </div>
+            <div className='details-box'>
+                {showDesc && (
+                    <div>
+                        <p className='question-description'>
+                            {question.questionDesc}
+                        </p>
+                        <p className='question-source'>
+                            {question.questionSource}
+                        </p>
+                    </div>
+                )}
             </div>
         </>
     );
