@@ -22,6 +22,7 @@ html {
     padding: 0;
     box-sizing: inherit;
     font-family: "Vazirmatn", sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -46,8 +47,6 @@ ul {
 a {
     text-decoration: none;
 }
-
-
 
 .start-quiz-btn,
 .finish-quiz-btn {
@@ -101,12 +100,17 @@ a {
 }
 
 /* responsive range */
-@media only screen and (max-width: 1400px) {}
+@media only screen and (max-width: 1400px) {
+}
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+}
 
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+}
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+}
 
-@media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 576px) {
+}

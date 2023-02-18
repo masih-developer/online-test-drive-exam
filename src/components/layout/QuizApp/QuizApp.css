@@ -1,5 +1,4 @@
 .quiz-app {
-    margin: 10rem 0;
     min-height: calc(100vh - 7.75rem);
     display: flex;
     justify-content: center;
@@ -8,5 +7,5 @@
 }
 
 .quiz-app-wrapper {
-    direction: ltr;
+    margin: 10rem 0;
 }
